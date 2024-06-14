@@ -1,0 +1,1115 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Baekhil\Desktop\The_design_of_Embedded_systems\demo\demo.uv2
+Project File Date:  06/10/2024
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(6): error C168: 'state': array of bit
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=9.0 xdata=0 code=25
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=9.0 xdata=0 code=25
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(43): error C202: 'j': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C182: pointer to different objects
+MAIN.C(47): error C202: 'tab': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C182: pointer to different objects
+MAIN.C(47): error C193: '~': bad operand type
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C182: pointer to different objects
+MAIN.C(39): warning C235: parameter 1: different types
+MAIN.C(68): warning C206: '_nop_': missing function-prototype
+MAIN.C(68): error C264: intrinsic '_nop_': declaration/activation error
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C182: pointer to different objects
+MAIN.C(39): warning C235: parameter 1: different types
+MAIN.C(68): warning C206: '_nop_': missing function-prototype
+MAIN.C(68): error C264: intrinsic '_nop_': declaration/activation error
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(68): warning C206: '_nop_': missing function-prototype
+MAIN.C(68): error C264: intrinsic '_nop_': declaration/activation error
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(75): warning C206: 'SendByte': missing function-prototype
+MAIN.C(75): error C267: 'SendByte': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SENDBYTE
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SENDBYTE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 01BDH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SENDBYTE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 01C2H
+Program Size: data=23.0 xdata=0 code=458
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=23.0 xdata=0 code=477
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=23.0 xdata=0 code=477
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=23.0 xdata=0 code=516
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(39): error C202: 'state3': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=23.0 xdata=0 code=516
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(78): error C174: return-expression on void-function
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=741
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=741
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=741
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=741
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=739
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=742
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(53): error C202: 'state': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(62): warning C280: 'state': unreferenced local variable
+linking...
+Program Size: data=87.0 xdata=0 code=727
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=742
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=741
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=98.0 xdata=0 code=764
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=732
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(62): warning C280: 'state': unreferenced local variable
+linking...
+Program Size: data=87.0 xdata=0 code=719
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=737
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=744
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYMS?MAIN
+Program Size: data=91.0 xdata=0 code=739
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=744
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=744
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=744
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYMS?MAIN
+Program Size: data=91.0 xdata=0 code=729
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=744
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(46): warning C280: 'k': unreferenced local variable
+linking...
+Program Size: data=90.0 xdata=0 code=732
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=732
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=90.0 xdata=0 code=732
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(16): warning C236: '_display_state': different length of parameter lists
+MAIN.C(44): error C202: 'tab': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(16): warning C236: '_display_state': different length of parameter lists
+MAIN.C(44): error C208: '_display_state': too many actual parameters
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(56): error C202: 'tab': undefined identifier
+MAIN.C(58): error C202: 'tab': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=98.0 xdata=0 code=875
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=98.0 xdata=0 code=875
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=98.0 xdata=0 code=875
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(18): error C129: missing ';' before 'buf'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(18): error C129: missing ';' before 'buf'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(60): warning C206: 'strcmp': missing function-prototype
+MAIN.C(60): error C267: 'strcmp': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(63): warning C206: 'SendStr': missing function-prototype
+MAIN.C(63): error C267: 'SendStr': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(243): error C237: '_SendByte': function already has a body
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(65): warning C206: 'SendStr': missing function-prototype
+MAIN.C(65): error C267: 'SendStr': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDBYTE2?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1688
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1704
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITUART?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAY_STATE?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_STATE_TO_TAB1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_STATE_TO_TAB2?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_STATE_TO_TAB2?MAIN
+    LENGTH:  0009H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SENDSTR?MAIN
+    LENGTH:  0003H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DELAYMS?MAIN
+    LENGTH:  0001H
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_STATE_TO_TAB2?BYTE
+    SEGMENT: ?DT?_STATE_TO_TAB2?MAIN
+Program Size: data=142.0 xdata=0 code=770
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1704
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1114
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=17
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1095
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=17
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1114
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+Program Size: data=201.0 xdata=0 code=1032
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 028DH
+Program Size: data=98.0 xdata=0 code=878
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 028DH
+Program Size: data=98.0 xdata=0 code=878
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=201.0 xdata=0 code=1016
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 028DH
+Program Size: data=98.0 xdata=0 code=878
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0059H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=201.0 xdata=0 code=1016
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=101.0 xdata=0 code=1016
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?MAIN
+    LENGTH:  0043H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  BUF
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  REC_FLAG
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  GET_0D
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  HEAD
+    SEGMENT: ?DT?MAIN
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=165.0 xdata=0 code=1016
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=121.0 xdata=0 code=1016
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(50): warning C206: 'InitUART': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITUART
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0319H
+Program Size: data=109.0 xdata=0 code=1016
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(193): error C237: '_SendByte': function already has a body
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDBYTE2?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTR?MAIN
+Program Size: data=109.0 xdata=0 code=1059
+creating hex file from "demo"...
+"demo" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDBYTE2?MAIN
+Program Size: data=109.0 xdata=0 code=1606
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDBYTE2?MAIN
+Program Size: data=109.0 xdata=0 code=1606
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=109.0 xdata=0 code=1622
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTR?MAIN
+Program Size: data=102.0 xdata=0 code=930
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=99.0 xdata=0 code=887
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY_SCORE?MAIN
+Program Size: data=108.0 xdata=0 code=974
+creating hex file from "demo"...
+"demo" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1021
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1021
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1021
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1036
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1074
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1075
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1075
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=108.0 xdata=0 code=1136
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(100): error C202: 'i': undefined identifier
+MAIN.C(103): error C202: 'k1': undefined identifier
+MAIN.C(105): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=109.0 xdata=0 code=1175
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=109.0 xdata=0 code=1178
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=109.0 xdata=0 code=1263
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1576
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1494
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1494
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1494
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1494
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1499
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1501
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1592
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(81): error C202: 'gameover': undefined identifier
+MAIN.C(122): error C202: 'gameover': undefined identifier
+MAIN.C(313): error C202: 'gameover': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=118.0 xdata=0 code=1467
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(73): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISPLAY_SCORE
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISPLAY_SCORE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04BCH
+Program Size: data=117.0 xdata=0 code=1360
+creating hex file from "demo"...
+"demo" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISPLAY_SCORE
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISPLAY_SCORE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04BCH
+Program Size: data=116.0 xdata=0 code=1360
+creating hex file from "demo"...
+"demo" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1373
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1366
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(359): warning C206: 'Start_I2c': missing function-prototype
+MAIN.C(361): error C202: 'ack': undefined identifier
+MAIN.C(364): error C202: 'ack': undefined identifier
+MAIN.C(370): error C202: 'ack': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(362): error C202: 'ack': undefined identifier
+MAIN.C(365): error C202: 'ack': undefined identifier
+MAIN.C(371): error C202: 'ack': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(377): warning C206: 'Stop_I2c': missing function-prototype
+MAIN.C(383): error C202: 'SDA': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(388): warning C206: '_Nop': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04EBH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04F0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04F3H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04F6H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04F9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 04FCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0501H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0504H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0507H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 050AH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 050DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0512H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0515H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0544H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0549H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 054CH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 054FH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0552H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0555H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 055AH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 055DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0560H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0563H
+Program Size: data=123.1 xdata=0 code=1527
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(333): error C202: 'ack': undefined identifier
+MAIN.C(336): error C202: 'ack': undefined identifier
+MAIN.C(342): error C202: 'ack': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ISENDSTR?MAIN
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0021H
+Program Size: data=123.1 xdata=0 code=1483
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1366
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1366
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1366
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1366
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1375
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=117.0 xdata=0 code=1378
+creating hex file from "demo"...
+"demo" - 0 Error(s), 0 Warning(s).

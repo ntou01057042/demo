@@ -1,0 +1,376 @@
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <INTRINS.H>
+   2          #include <REG52.H>
+   3          #include <string.h>
+   4          
+   5          #define DataPort P0
+   6          
+   7          #define MAX 8
+   8          
+   9          typedef unsigned char byte; // !
+  10          
+  11          /* ! */
+  12          sbit LATCH = P1 ^ 0;
+  13          sbit SRCLK = P1 ^ 1;
+  14          sbit SER = P1 ^ 2;
+  15          
+  16          sbit LATCH_B = P2 ^ 2;
+  17          sbit SRCLK_B = P2 ^ 1;
+  18          sbit SER_B = P2 ^ 0;
+  19          
+  20          sbit LATCH1 = P2 ^ 5;
+  21          sbit LATCH2 = P2 ^ 6;
+  22          
+  23          code unsigned char segout[] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
+  24          code unsigned char dofly_WeiMa[] = {0xfe, 0xfd, 0xfb, 0xf7, 0xef, 0xdf, 0xbf, 0x7f};
+  25          code unsigned char dofly_DuanMa[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x00};
+  26          
+  27          unsigned char state[][8] = {{0, 0, 0, 0, 0, 0, 0, 0},
+  28                                      {0, 0, 0, 0, 0, 0, 0, 0},
+  29                                      {0, 0, 0, 0, 0, 0, 0, 0},
+  30                                      {0, 0, 0, 2, 1, 0, 0, 0},
+  31                                      {0, 0, 0, 1, 2, 0, 0, 0},
+  32                                      {0, 0, 0, 0, 0, 0, 0, 0},
+  33                                      {0, 0, 0, 0, 0, 0, 0, 0},
+  34                                      {0, 0, 0, 0, 0, 0, 0, 0}};
+  35          unsigned char display_data[8] = {0x3f, 0x78, 0x74, 0x7b, 0x06, 0x06, 0x5c, 0x00}; //
+  36          // unsigned char display_data[8] = {0x3f, 0x78, 0x74, 0x}; // 
+  37          unsigned char gameover = 0;
+  38          
+  39          void InitUART(void);
+  40          void init_timer0(void);
+  41          void display_state(const unsigned char tab1[], const unsigned char tab2[]);
+  42          void state_to_tab1(const unsigned char state[][8], unsigned char tab[]);
+  43          void state_to_tab2(const unsigned char state[][8], unsigned char tab[]);
+  44          void SendSeg(unsigned char dat);                        // !
+  45          void Send2Byte(unsigned char dat1, unsigned char dat2); // !
+  46          void SendByte(unsigned char dat);                       // !
+  47          void Out595(void);                                      // !
+  48          void DelayMs(unsigned char t);                          // !
+  49          void DelayUs2x(unsigned char t);                        // !
+  50          // void SendStr(unsigned char *s);                         // !
+  51          // void SendByte2(unsigned char dat);                      // !
+  52          void display_score(void);
+  53          
+  54          void main(void)
+  55          {
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 2   
+
+  56   1          // unsigned char state[][8] = {{0, 0, 0, 0, 0, 0, 0, 0},
+  57   1          //                             {0, 0, 0, 0, 0, 0, 0, 0},
+  58   1          //                             {0, 0, 0, 0, 0, 0, 0, 0},
+  59   1          //                             {0, 0, 0, 2, 1, 0, 0, 0},
+  60   1          //                             {0, 0, 0, 1, 2, 0, 0, 0},
+  61   1          //                             {0, 0, 0, 0, 0, 0, 0, 0},
+  62   1          //                             {0, 0, 0, 0, 0, 0, 0, 0},
+  63   1          //                             {0, 0, 0, 0, 0, 0, 0, 0}};
+  64   1          unsigned char tab1[8]; // green
+  65   1          unsigned char tab2[8]; // red
+  66   1          unsigned char tab3[8] = {0};
+  67   1      
+  68   1          InitUART();
+  69   1          init_timer0();
+  70   1      
+  71   1          while (1)
+  72   1          {
+  73   2              state_to_tab1(state, tab1);
+  74   2              state_to_tab2(state, tab2);
+  75   2              display_state(tab1, tab2);
+  76   2          }
+  77   1      }
+  78          
+  79          void InitUART(void)
+  80          {
+  81   1          SCON = 0x50;  // SCON: 模式 1, 8-bit UART, 使能接收
+  82   1          TMOD |= 0x20; // TMOD: timer 1, mode 2, 8-bit 重裝
+  83   1          TH1 = 0xFD;   // TH1:  重裝值 9600 串列傳輸速率 晶振 11.0592MHz
+  84   1          TR1 = 1;      // TR1:  timer 1 打開
+  85   1          EA = 1;       // 打開總中斷
+  86   1          ES = 1;       // 打開串口中斷
+  87   1      }
+  88          
+  89          void init_timer0(void)
+  90          {
+  91   1          TMOD |= 0x01; // set timer0 as mode 1 (16-bit timer)
+  92   1          TR0 = 1;      // timer0 start running
+  93   1          ET0 = 1;      // enable timer0 interrupt
+  94   1          // EA = 1;      // enable global interrupt
+  95   1      }
+  96          
+  97          // void display_state(const unsigned char tab[])
+  98          void display_state(const unsigned char tab1[], const unsigned char tab2[])
+  99          {
+ 100   1          unsigned char i;
+ 101   1      
+ 102   1          for (i = 0; i < 8; ++i)
+ 103   1          {
+ 104   2              SendSeg(segout[i]);        // scan
+ 105   2              Send2Byte(~tab1[i], 0xff); // red
+ 106   2              Out595();
+ 107   2              Send2Byte(0xff, ~tab2[i]); // green
+ 108   2              Out595();
+ 109   2              DelayMs(1);
+ 110   2              Send2Byte(0xff, 0xff); // clear
+ 111   2              Out595();
+ 112   2          }
+ 113   1      }
+ 114          
+ 115          void state_to_tab1(const unsigned char state[][8], unsigned char tab[])
+ 116          {
+ 117   1          unsigned char col, row, tmp;
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 3   
+
+ 118   1      
+ 119   1          for (col = 0, tmp = 0; col < 8; col++)
+ 120   1          {
+ 121   2              for (row = 0; row < 8; row++)
+ 122   2              {
+ 123   3                  tmp >>= 1;
+ 124   3                  if (state[row][col] == 1)
+ 125   3                  {
+ 126   4                      tmp |= 0x80;
+ 127   4                  }
+ 128   3              }
+ 129   2              tab[7 - col] = tmp;
+ 130   2          }
+ 131   1      }
+ 132          
+ 133          void state_to_tab2(const unsigned char state[][8], unsigned char tab[])
+ 134          {
+ 135   1          unsigned char col, row, tmp;
+ 136   1      
+ 137   1          for (col = 0, tmp = 0; col < 8; col++)
+ 138   1          {
+ 139   2              for (row = 0; row < 8; row++)
+ 140   2              {
+ 141   3                  tmp >>= 1;
+ 142   3                  if (state[row][col] == 2)
+ 143   3                  {
+ 144   4                      tmp |= 0x80;
+ 145   4                  }
+ 146   3              }
+ 147   2              tab[7 - col] = tmp;
+ 148   2          }
+ 149   1      }
+ 150          
+ 151          void SendSeg(unsigned char dat)
+ 152          {
+ 153   1          unsigned char i;
+ 154   1      
+ 155   1          for (i = 0; i < 8; ++i)
+ 156   1          {
+ 157   2              SRCLK_B = 0;
+ 158   2              SER_B = dat & 0x80;
+ 159   2              dat <<= 1;
+ 160   2              SRCLK_B = 1;
+ 161   2          }
+ 162   1          LATCH_B = 1;
+ 163   1          _nop_();
+ 164   1          LATCH_B = 0;
+ 165   1      }
+ 166          
+ 167          void Send2Byte(unsigned char dat1, unsigned char dat2)
+ 168          {
+ 169   1          SendByte(dat1);
+ 170   1          SendByte(dat2);
+ 171   1      }
+ 172          
+ 173          void SendByte(unsigned char dat)
+ 174          {
+ 175   1          unsigned char i;
+ 176   1      
+ 177   1          for (i = 0; i < 8; ++i)
+ 178   1          {
+ 179   2              SRCLK = 0;
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 4   
+
+ 180   2              SER = dat & 0x80;
+ 181   2              dat <<= 1;
+ 182   2              SRCLK = 1;
+ 183   2          }
+ 184   1      }
+ 185          
+ 186          void Out595(void)
+ 187          {
+ 188   1          LATCH = 1;
+ 189   1          _nop_();
+ 190   1          LATCH = 0;
+ 191   1      }
+ 192          
+ 193          void DelayMs(unsigned char t)
+ 194          {
+ 195   1          while (--t)
+ 196   1          {
+ 197   2              // 大致延時1mS
+ 198   2              DelayUs2x(245);
+ 199   2              DelayUs2x(245);
+ 200   2          }
+ 201   1      }
+ 202          
+ 203          void DelayUs2x(unsigned char t)
+ 204          {
+ 205   1          while (--t)
+ 206   1              ;
+ 207   1      }
+ 208          
+ 209          // /*------------------------------------------------
+ 210          //                     發送一個字串
+ 211          // ------------------------------------------------*/
+ 212          // void SendStr(unsigned char *s)
+ 213          // {
+ 214          //     while (*s != '\0') // \0 表示字串結束標誌，通過檢測是否字串末尾
+ 215          //     {
+ 216          //         SendByte2(*s);
+ 217          //         s++;
+ 218          //     }
+ 219          // }
+ 220          
+ 221          // /*------------------------------------------------
+ 222          //                     發送一個位元組
+ 223          // ------------------------------------------------*/
+ 224          // void SendByte2(unsigned char dat)
+ 225          // {
+ 226          //     SBUF = dat;
+ 227          //     while (!TI)
+ 228          //         ;
+ 229          //     TI = 0;
+ 230          // }
+ 231          
+ 232          void display_score(void)
+ 233          {
+ 234   1          static unsigned char i = 0;
+ 235   1      
+ 236   1          DataPort = 0;
+ 237   1          LATCH1 = 1;
+ 238   1          LATCH1 = 0;
+ 239   1          DataPort = dofly_WeiMa[i];
+ 240   1          LATCH2 = 1;
+ 241   1          LATCH2 = 0;
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 5   
+
+ 242   1          DataPort = display_data[i];
+ 243   1          LATCH1 = 1;
+ 244   1          LATCH1 = 0;
+ 245   1      
+ 246   1          if (++i == 8)
+ 247   1          {
+ 248   2              i = 0;
+ 249   2          }
+ 250   1      }
+ 251          
+ 252          /*------------------------------------------------
+ 253                               串口中斷程式
+ 254          ------------------------------------------------*/
+ 255          void UART_SER(void) interrupt 4 // 串列中斷服務程式
+ 256          {
+ 257   1          unsigned char tmp; // 定義臨時
+ 258   1          static unsigned char cnt = 0;
+ 259   1      
+ 260   1          display_data[2] = 0x00;
+ 261   1          display_data[3] = 0x00;
+ 262   1          display_data[4] = 0x00;
+ 263   1          display_data[5] = 0x00;
+ 264   1      
+ 265   1          if (RI && gameover != 1) // 判斷是接收中斷產生
+ 266   1          {
+ 267   2              RI = 0;     // 標誌位元清零
+ 268   2              tmp = SBUF; // 讀入緩衝區的值
+ 269   2              if (tmp == 'G')
+ 270   2              {
+ 271   3                  gameover = 1;
+ 272   3              }
+ 273   2              // if (get_0d == 0)
+ 274   2              // {
+ 275   2              //     if (tmp == 0x0d)
+ 276   2              //         get_0d = 1;
+ 277   2              //     else
+ 278   2              //     {
+ 279   2              //         buf[head] = tmp;
+ 280   2              //         head++;
+ 281   2              //         if (head == MAX)
+ 282   2              //             head = 0;
+ 283   2              //     }
+ 284   2              // }
+ 285   2              // else if (get_0d == 1)
+ 286   2              // {
+ 287   2              //     if (tmp != 0x0a)
+ 288   2              //     {
+ 289   2              //         head = 0;
+ 290   2              //         get_0d = 0;
+ 291   2              //     }
+ 292   2              //     else
+ 293   2              //     {
+ 294   2              //         rec_flag = 1;
+ 295   2              //         get_0d = 0;
+ 296   2              //     }
+ 297   2      
+ 298   2              //     //       SBUF=tmp;                 //把接收到的值再發回電腦端
+ 299   2              // }
+ 300   2      
+ 301   2              if (cnt == 64)
+ 302   2              {
+ 303   3                  display_data[0] = dofly_DuanMa[tmp - '0'];
+C51 COMPILER V7.08   MAIN                                                                  06/11/2024 10:01:06 PAGE 6   
+
+ 304   3              }
+ 305   2              else if (cnt == 65)
+ 306   2              {
+ 307   3                  display_data[1] = dofly_DuanMa[tmp - '0'];
+ 308   3              }
+ 309   2              else if (cnt == 66)
+ 310   2              {
+ 311   3                  display_data[6] = dofly_DuanMa[tmp - '0'];
+ 312   3              }
+ 313   2              else if (cnt == 67)
+ 314   2              {
+ 315   3                  display_data[7] = dofly_DuanMa[tmp - '0'];
+ 316   3              }
+ 317   2              else if (tmp == 0x30)
+ 318   2              {
+ 319   3                  state[cnt / 8][cnt % 8] = 0;
+ 320   3              }
+ 321   2              else if (tmp == 0x31)
+ 322   2              {
+ 323   3                  state[cnt / 8][cnt % 8] = 1;
+ 324   3              }
+ 325   2              else if (tmp == 0x32)
+ 326   2              {
+ 327   3                  state[cnt / 8][cnt % 8] = 2;
+ 328   3              }
+ 329   2      
+ 330   2              cnt++;
+ 331   2              if (cnt == 68)
+ 332   2              {
+ 333   3                  cnt = 0;
+ 334   3              }
+ 335   2          }
+ 336   1      }
+ 337          
+ 338          void timer0_isr(void) interrupt 1
+ 339          {
+ 340   1          display_score();
+ 341   1          TH0 = (65536 - 2000) / 256;
+ 342   1          TL0 = (65536 - 2000) % 256;
+ 343   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    757    ----
+   CONSTANT SIZE    =     35    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     75      51
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
